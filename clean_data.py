@@ -6,7 +6,7 @@ def clean_data():
     for filename in os.listdir('data/'):
         if filename.endswith('.csv'):
             df=pd.read_csv(f'data/{filename}',header=2, index_col=0)
-            df=df.dropna()
+            df.dropna(inplace=True)
             df.sort_index(inplace=True)
             df.to_csv(f'data/cleaned/{filename}')
 
