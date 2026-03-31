@@ -22,7 +22,7 @@ def plot_volatility():
     plt.savefig('data/volatility_by_sector.png')
     plt.close()
 
-def plot_cumalative_returns():
+def plot_cumulative_returns():
     sns.set_theme()
     plt.figure(figsize=(12, 6))
     for sector,tickers in TICKERS.items():
@@ -43,4 +43,4 @@ def plot_cumalative_returns():
 
 if __name__=='__main__':
     plot_volatility()
-    plot_cumalative_returns()
+    plot_cumulative_returns()
